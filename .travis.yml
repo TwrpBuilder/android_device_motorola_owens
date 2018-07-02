@@ -15,7 +15,7 @@ script:
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery
   - |
     docker run --rm -i -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) -v "$(pwd):/home/twrp/:rw,z" yshalsager/lineageos:14.1 bash << EOF
-    cd /root/twrp/
+    cd /home/twrp/
     source build/envsetup.sh && lunch omni_owens-eng && make -j16 recoveryimage
     exit
     EOF
