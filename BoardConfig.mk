@@ -31,12 +31,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
-BOARD_USES_QCOM_HARDWARE := true
-
-# Crypto
-#TARGET_HW_DISK_ENCRYPTION := true
-TW_INCLUDE_CRYPTO := true
-
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 RECOVERY_SDCARD_ON_DATA := true
@@ -59,5 +53,5 @@ TW_THEME := portrait_hdpi
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 include $(LOCAL_PATH)/kernel.mk
-#include device/generic/twrpbuilder/BoardConfig32.mk
+include device/generic/twrpbuilder/BoardConfig32.mk
 
